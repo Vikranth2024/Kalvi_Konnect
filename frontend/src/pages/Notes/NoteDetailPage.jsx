@@ -3,7 +3,8 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import * as notesService from '../../services/notes.service';
 import LoadingSpinner from '../../components/shared/LoadingSpinner';
 import ErrorBanner from '../../components/shared/ErrorBanner';
-import NoteAIInsights from '../../components/Notes/NoteAIInsights';
+import NoteAIInsights from '../../components/notes/NoteAIInsights';
+
 import { ChevronLeft, ThumbsUp, User, Calendar, Tag, Share2, MessageSquare, Sparkles, FileText, Download } from 'lucide-react';
 
 const NoteDetailPage = () => {
