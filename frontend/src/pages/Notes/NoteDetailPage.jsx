@@ -3,13 +3,14 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import * as notesService from '../../services/notes.service';
 import LoadingSpinner from '../../components/shared/LoadingSpinner';
 import ErrorBanner from '../../components/shared/ErrorBanner';
+import { useAuth } from '../../hooks/useAuth';
 import NoteAIInsights from '../../components/notes/NoteAIInsights';
-
-import { ChevronLeft, ThumbsUp, User, Calendar, Tag, Share2, MessageSquare, Sparkles, FileText, Download } from 'lucide-react';
+import { ChevronLeft, ThumbsUp, User, Calendar, Tag, Share2, MessageSquare, Sparkles, FileText, Download, Trash2 } from 'lucide-react';
 
 const NoteDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [note, setNote] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
